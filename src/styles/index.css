@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  --font-primary: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mystic: 'Cinzel', serif;
+  --font-mono: 'Space Mono', monospace;
+
+  /* BTTH Cosmic Color Palette */
+  --color-void-bg: #05050d;
+  --color-void-deep: #030308;
+  
+  --color-green-glow: #10b981;
+  --color-green-neon: #00ffaa;
+  
+  --color-purple-glow: #a855f7;
+  --color-purple-neon: #c084fc;
+
+  --color-text-primary: #f8fafc;
+  --color-text-muted: #94a3b8;
+}
+
+/* Task 2: Global CSS & Animations for 2D Floating Elements */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
+}
+
+.antigravity-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  background-color: var(--color-void-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
